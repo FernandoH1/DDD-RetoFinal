@@ -16,4 +16,12 @@ public class Ticket extends Entity<TicketID> {
     public Ticket(TicketID entityId) {
         super(entityId);
     }
+
+    public Ticket(TicketID entityId, TicketID ticketID, TipoTicket tipoTicket, Precio precio, Plazo plazo) {
+        super(entityId);
+        this.ticketID = ticketID;
+        this.tipoTicket = tipoTicket;
+        this.precio = precio;
+        this.plazo = plazo;
+    }
 }

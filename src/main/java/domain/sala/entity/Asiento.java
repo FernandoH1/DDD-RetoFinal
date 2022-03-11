@@ -15,4 +15,11 @@ public class Asiento extends Entity<AsientoID> {
     public Asiento(AsientoID entityId) {
         super(entityId);
     }
+
+    public Asiento(AsientoID entityId, AsientoID asientoID, TipoAsiento tipoAsiento, PlantaID plantaID) {
+        super(entityId);
+        this.asientoID = asientoID;
+        this.tipoAsiento = tipoAsiento;
+        this.plantaID = plantaID;
+    }
 }

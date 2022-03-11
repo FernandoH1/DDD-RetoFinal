@@ -10,7 +10,7 @@ public class Plazo implements ValueObject<Date> {
 
     public Plazo(Date fecha) {
         this.fecha = Objects.requireNonNull(fecha);
-        if(fecha != null){
+        if(fecha == null){
             throw new IllegalArgumentException("El plazo No puede ser vacio");
         }
     }

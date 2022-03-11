@@ -14,4 +14,11 @@ public class Planta extends Entity<PlantaID> {
     public Planta(PlantaID entityId) {
         super(entityId);
     }
+
+    public Planta(PlantaID entityId, PlantaID plantaID, PlantaBaja plantaBaja, SegundoPiso segundoPiso) {
+        super(entityId);
+        this.plantaID = plantaID;
+        this.plantaBaja = plantaBaja;
+        this.segundoPiso = segundoPiso;
+    }
 }

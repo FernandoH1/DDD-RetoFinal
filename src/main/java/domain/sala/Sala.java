@@ -21,4 +21,13 @@ public class Sala extends AggregateEvent<SalaID> {
     public Sala(SalaID entityId) {
         super(entityId);
     }
+
+    public Sala(SalaID entityId, SalaID salaID, Set<Asiento> asiento, Set<Planta> planta, Capacidad capacidad, Set<Funcion> funciones) {
+        super(entityId);
+        this.salaID = salaID;
+        this.asiento = asiento;
+        this.planta = planta;
+        this.capacidad = capacidad;
+        this.funciones = funciones;
+    }
 }

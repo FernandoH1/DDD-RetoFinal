@@ -14,4 +14,11 @@ public class PaginaWeb extends Entity<PaginaWebID> {
     public PaginaWeb(PaginaWebID entityId) {
         super(entityId);
     }
+
+    public PaginaWeb(PaginaWebID entityId, PaginaWebID paginaWebID, VideoPromocional videoPromocional, InformacionFuncion informacionFuncion) {
+        super(entityId);
+        this.paginaWebID = paginaWebID;
+        this.videoPromocional = videoPromocional;
+        this.informacionFuncion = informacionFuncion;
+    }
 }

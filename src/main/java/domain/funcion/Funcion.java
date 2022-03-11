@@ -6,7 +6,7 @@ import domain.espctaculo.Espctaculo;
 import domain.funcion.entity.PaginaWeb;
 import domain.funcion.entity.Ticket;
 import domain.funcion.value.DatosFuncion;
-import domain.funcion.value.Duracion;
+import domain.generic.Duracion;
 import domain.funcion.value.Fecha;
 import domain.generic.FuncionID;
 
@@ -24,5 +24,16 @@ public class Funcion extends AggregateEvent<FuncionID> {
 
     public Funcion(FuncionID entityId) {
         super(entityId);
+    }
+
+    public Funcion(FuncionID entityId, FuncionID funcionID, DatosFuncion datosFuncion, Set<Espctaculo> espctaculos, Ticket ticket, PaginaWeb paginaWeb, Fecha fecha, Duracion duracion) {
+        super(entityId);
+        this.funcionID = funcionID;
+        this.datosFuncion = datosFuncion;
+        this.espctaculos = espctaculos;
+        this.ticket = ticket;
+        this.paginaWeb = paginaWeb;
+        this.fecha = fecha;
+        this.duracion = duracion;
     }
 }
