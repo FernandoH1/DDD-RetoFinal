@@ -6,19 +6,21 @@ import domain.sala.value.PlantaID;
 import domain.sala.value.SegundoPiso;
 
 public class Planta extends Entity<PlantaID> {
-    protected PlantaID plantaID;
-    protected PlantaBaja plantaBaja;
-    protected SegundoPiso segundoPiso;
+    private PlantaBaja plantaBaja;
+    private SegundoPiso segundoPiso;
 
 
-    public Planta(PlantaID entityId) {
-        super(entityId);
-    }
-
-    public Planta(PlantaID entityId, PlantaID plantaID, PlantaBaja plantaBaja, SegundoPiso segundoPiso) {
-        super(entityId);
-        this.plantaID = plantaID;
+    public Planta(PlantaID plantaID, PlantaBaja plantaBaja, SegundoPiso segundoPiso) {
+        super(plantaID);
         this.plantaBaja = plantaBaja;
         this.segundoPiso = segundoPiso;
+    }
+
+    public PlantaBaja plantaBaja() {
+        return plantaBaja;
+    }
+
+    public SegundoPiso segundoPiso() {
+        return segundoPiso;
     }
 }

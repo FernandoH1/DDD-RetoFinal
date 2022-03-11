@@ -7,19 +7,20 @@ import domain.sala.value.PlantaID;
 import domain.sala.value.TipoAsiento;
 
 public class Asiento extends Entity<AsientoID> {
- protected AsientoID asientoID;
- protected TipoAsiento tipoAsiento;
- protected PlantaID plantaID;
+ private TipoAsiento tipoAsiento;
+ private PlantaID plantaID;
 
-
-    public Asiento(AsientoID entityId) {
-        super(entityId);
-    }
-
-    public Asiento(AsientoID entityId, AsientoID asientoID, TipoAsiento tipoAsiento, PlantaID plantaID) {
-        super(entityId);
-        this.asientoID = asientoID;
+    public Asiento(AsientoID asientoID, TipoAsiento tipoAsiento, PlantaID plantaID) {
+        super(asientoID);
         this.tipoAsiento = tipoAsiento;
         this.plantaID = plantaID;
+    }
+
+    public TipoAsiento tipoAsiento() {
+        return tipoAsiento;
+    }
+
+    public PlantaID plantaID() {
+        return plantaID;
     }
 }

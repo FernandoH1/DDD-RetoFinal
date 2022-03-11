@@ -8,20 +8,30 @@ import domain.funcion.value.TipoTicket;
 
 
 public class Ticket extends Entity<TicketID> {
-    protected TicketID ticketID;
-    protected TipoTicket tipoTicket;
-    protected Precio precio;
-    protected Plazo plazo;
+    private TipoTicket tipoTicket;
+    private Precio precio;
+    private Plazo plazo;
 
     public Ticket(TicketID entityId) {
         super(entityId);
     }
 
-    public Ticket(TicketID entityId, TicketID ticketID, TipoTicket tipoTicket, Precio precio, Plazo plazo) {
-        super(entityId);
-        this.ticketID = ticketID;
+    public Ticket(TicketID ticketID, TipoTicket tipoTicket, Precio precio, Plazo plazo) {
+        super(ticketID);
         this.tipoTicket = tipoTicket;
         this.precio = precio;
         this.plazo = plazo;
+    }
+
+    public TipoTicket tipoTicket() {
+        return tipoTicket;
+    }
+
+    public Precio precio() {
+        return precio;
+    }
+
+    public Plazo plazo() {
+        return plazo;
     }
 }

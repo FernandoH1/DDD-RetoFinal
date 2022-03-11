@@ -7,18 +7,20 @@ import domain.espctaculo.value.Genero;
 
 
 public class Artista extends Entity<ArtistaID> {
-    protected ArtistaID artistaID;
     protected DatosArtista datosArtista;
     protected Genero genero;
 
-    public Artista(ArtistaID entityId) {
-        super(entityId);
-    }
-
-    public Artista(ArtistaID entityId, ArtistaID artistaID, DatosArtista datosArtista, Genero genero) {
-        super(entityId);
-        this.artistaID = artistaID;
+    public Artista(ArtistaID artistaID, DatosArtista datosArtista, Genero genero) {
+        super(artistaID);
         this.datosArtista = datosArtista;
         this.genero = genero;
+    }
+
+    public DatosArtista datosArtista() {
+        return datosArtista;
+    }
+
+    public Genero genero() {
+        return genero;
     }
 }

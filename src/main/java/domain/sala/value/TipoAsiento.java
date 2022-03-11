@@ -2,8 +2,6 @@ package domain.sala.value;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-import java.util.Objects;
-
 public class TipoAsiento implements ValueObject<TipoAsiento.tipo> {
     private final tipo tipoAsiento;
 

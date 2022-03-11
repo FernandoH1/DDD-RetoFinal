@@ -7,18 +7,24 @@ import domain.funcion.value.PaginaWebID;
 import domain.funcion.value.VideoPromocional;
 
 public class PaginaWeb extends Entity<PaginaWebID> {
- protected PaginaWebID paginaWebID;
- protected VideoPromocional videoPromocional;
- protected InformacionFuncion informacionFuncion;
+    private VideoPromocional videoPromocional;
+    private InformacionFuncion informacionFuncion;
 
     public PaginaWeb(PaginaWebID entityId) {
         super(entityId);
     }
 
-    public PaginaWeb(PaginaWebID entityId, PaginaWebID paginaWebID, VideoPromocional videoPromocional, InformacionFuncion informacionFuncion) {
-        super(entityId);
-        this.paginaWebID = paginaWebID;
+    public PaginaWeb(PaginaWebID paginaWebID, VideoPromocional videoPromocional, InformacionFuncion informacionFuncion) {
+        super(paginaWebID);
         this.videoPromocional = videoPromocional;
         this.informacionFuncion = informacionFuncion;
+    }
+
+    public VideoPromocional videoPromocional() {
+        return videoPromocional;
+    }
+
+    public InformacionFuncion informacionFuncion() {
+        return informacionFuncion;
     }
 }
