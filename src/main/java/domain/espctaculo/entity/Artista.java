@@ -1,14 +1,14 @@
 package domain.espctaculo.entity;
 
 import co.com.sofka.domain.generic.Entity;
-import domain.espctaculo.value.ArtistaID;
-import domain.espctaculo.value.DatosArtista;
-import domain.espctaculo.value.Genero;
+import domain.espctaculo.value.*;
+
+import java.util.Objects;
 
 
 public class Artista extends Entity<ArtistaID> {
-    protected DatosArtista datosArtista;
-    protected Genero genero;
+    private DatosArtista datosArtista;
+    private Genero genero;
 
     public Artista(ArtistaID artistaID, DatosArtista datosArtista, Genero genero) {
         super(artistaID);
@@ -23,4 +23,14 @@ public class Artista extends Entity<ArtistaID> {
     public Genero genero() {
         return genero;
     }
+
+    public void modificarDatosArtista(ArtistaID artistaID, DatosArtista datosArtista){
+        this.datosArtista = Objects.requireNonNull(datosArtista);
+    }
+
+    public void cambiarGenero(ArtistaID artistaID, Genero genero){
+        this.genero = Objects.requireNonNull(genero);
+    }
+
+
 }

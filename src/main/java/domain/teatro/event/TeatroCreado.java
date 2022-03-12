@@ -16,11 +16,11 @@ public class TeatroCreado extends DomainEvent {
         this.salas = salas;
     }
 
-    public Ubicacion ubicacion() {
+    public Ubicacion getUbicacion() {
         return ubicacion;
     }
 
-    public Set<Sala> salas() {
+    public Set<Sala> getSalas() {
         return salas;
     }
 }
