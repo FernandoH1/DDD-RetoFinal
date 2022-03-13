@@ -1,7 +1,6 @@
 package domain.espctaculo.event;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.espctaculo.Espctaculo;
 import domain.espctaculo.entity.Artista;
 import domain.espctaculo.entity.Espectador;
 import domain.generic.Duracion;

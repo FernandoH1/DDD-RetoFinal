@@ -20,4 +20,12 @@ public class Direccion implements ValueObject<String> {
     public String value() {
         return calle + numero;
     }
+
+    public String getCalle() {
+        return calle;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
 }
